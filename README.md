@@ -23,8 +23,7 @@ npm run dev
 ```
 
 ## 🔗 Routes
-<!-- Add URLINHERE.JSON to insominia collection -->
-[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Ignite%20Node.js%3A%20Daily%20Diet%0A&uri=URLINHERE.JSON)
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Ignite%20Node.js%3A%20Daily%20Diet%0A&uri=https://raw.githubusercontent.com/rcrdk/daily-diet-nodejs-api/main/insomnia.json)
 
 | Method     | Route          | Params/Body                             |
 | ---------- | -------------- | ----------------------------------------|

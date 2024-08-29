@@ -20,6 +20,7 @@ Setup enviroment variables and run:
 npm i
 npm run knex -- migrate:latest 
 npm run dev
+npm test
 ```
 
 ## 🔗 Routes

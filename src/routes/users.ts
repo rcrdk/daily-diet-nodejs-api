@@ -5,21 +5,29 @@ import { knex } from '../database'
 import { checkUserAuthenticated } from '../middlewares/check-user-authenticated'
 
 export async function usersRoutes(app: FastifyInstance) {
-  app.get('/', { preHandler: [checkUserAuthenticated] }, async (request) => {
-    const { sessionId } = request.cookies
+  app.get(
+    '/',
+    { preHandler: [checkUserAuthenticated] },
+    async (request, reply) => {
+      const { sessionId } = request.cookies
 
-    const user = await knex('users').where('session_id', sessionId).first()
+      const user = await knex('users').where('session_id', sessionId).first()
 
-    return user
-  })
+      if (!user) {
+        return reply.status(404).send({ error: 'User not found' })
+      }
+
+      return reply.status(200).send(user)
+    },
+  )
 
   app.post('/', async (request, reply) => {
-    const createTransactionBodySchema = z.object({
+    const createUserBodySchema = z.object({
       name: z.string(),
       email: z.string().email(),
     })
 
-    const { name, email } = createTransactionBodySchema.parse(request.body)
+    const { name, email } = createUserBodySchema.parse(request.body)
 
     let { sessionId } = request.cookies
 

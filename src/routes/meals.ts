@@ -171,7 +171,7 @@ export async function mealsRoutes(app: FastifyInstance) {
         { betterSequenceInDiet: 0, currentSequence: 0 },
       )
 
-      reply.status(201).send({
+      reply.status(200).send({
         totalMeals: totalMeals.length,
         totalMealsInDiet: totalMealsInDiet?.count,
         totalMealsOutOfDiet: totalMealsOutOfDiet?.count,

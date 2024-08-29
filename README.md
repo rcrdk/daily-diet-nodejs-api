@@ -50,9 +50,9 @@ npm test
 - [x] It should be possible to delete a meal
 - [x] It should be possible to list all user meals
 - [x] It should be possible to show a specific meal
-- [ ] It should be possible to retrieve summary metrics containing:
+- [x] It should be possible to retrieve summary metrics containing:
     - [x] Number of all meals registered
     - [x] Number of all meals respecting the diet
     - [x] Number of all meals out of diet
-    - [ ] Better sequence of meals on diet
+    - [x] Better sequence of meals on diet
 - [x] The user should be able to show, edit and delete meals created by theirs

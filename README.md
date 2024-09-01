@@ -1,4 +1,4 @@
-# 📋 Daily Diet
+# 📋 Daily Diet API
 I developed this project as a challenge of my latest studies on Node lessons at [Rocketseat](https://www.rocketseat.com.br).
 
 ## 🚀 Techs and Tools
